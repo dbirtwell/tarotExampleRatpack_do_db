@@ -1,0 +1,90 @@
+<html>
+	<!-- This dynamic page is using Ratpack and Groovy templates to a random Tarot Card -->
+    <head>
+    <title>Tarot for the day</title>	
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js">
+	  </script>
+      <link rel="stylesheet" type="text/css" href="css/reset-min.css">	  
+      <link rel="stylesheet" type="text/css" href="css/styles.css">	  	  	  
+    </head>
+
+	<body>
+	
+	<!-- Remember, JQuery \$ needs to be escaped -->
+	<script language="javascript">
+
+      \$(document).ready(function() {
+         // alert('Got Here');
+        \$('button').on('click', function() {
+           // alert('Selecting another card');
+
+          // load to another location
+          document.location.href = '/tarot';		   
+          // document.location.href = '/';		   		  
+          
+        });        
+      });  	
+	
+    </script>	  	
+
+	<div id="wrapper">	
+		
+      <div id="header">	
+        <h1> Tarot for the day</h1>
+        <h2> A Simple Site made with Groovy and Ratpack!</h2>
+      <!-- header -->
+	  </div>
+	  
+      <div id="nav">	
+        <ol>
+          <a href="/"><li>Home</li></a>
+          <a href="tarot"><li>Tarot</li></a>		  
+          <a href="about"><li>About</li></a>		  
+        </ol>			
+      <!-- nav -->
+	  </div>
+	  
+      <div id="side_bar">		  
+        <h1> For Entertainment Purposes ONLY</h1>
+        <p>
+        No claims are made that this application can be used predict the future. If it could, I would be rich!
+		</p>
+      <!-- side_bar -->
+	  </div>
+	  
+      <div id="content">
+
+        <h1> Tarot for the Day</h1>
+        <button>select another card</button>
+        <p> This card is generated just for you, along with it's meaning for </p>
+
+	    <p>
+	    ${new Date().format('EEE, MMM d, yyyy hh:mm aaa')}
+	    </p>
+		
+	    <!-- <p> -->
+		<!-- How to call the Groovy code directly -->
+	    <!-- Your tarot card for the day is ${new TarotDeckUtil().randomCard().name} Meaning is: -->
+	    <!-- </p> -->
+
+	    <ul title="Tarot Results">
+		  <hr size=4 width="50%"> 
+          <p>Card Name:  ${model.name}</p>
+          <p>Card Meaning:  ${model.meaning}</p>
+        </ul>
+        <img src=${model.image} >
+	  
+	  <!-- content -->
+	  </div>
+	  
+      <div id="footer">
+        <p>
+          No Copyright here. Use it as you like, but if it breaks, don't blame me.	
+		</p>
+      </div>				  
+	  
+	<!-- wrapper -->  
+	</div>  
+	  
+	</body>
+</html>
