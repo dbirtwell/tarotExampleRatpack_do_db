@@ -8,13 +8,19 @@ It was created as a learning and proof-of-concept project for BOTH Groovy and Ra
 
 This version uses old-style HTML (pre-HTML 5), with a smidgeon of JQuery to show how to use JQuery in the Ratpack template engine.
 
+ratpack.groovy is the main app/script
+
+to start the app just type > groovy ratpack.groovy
+
 This is just the beginning!
 
 Please see my Blog at:
 
 DavidBirtwell.com/wordpress
 
-[Note: THe blog is NOT updated regularly]
+[Note: The blog is NOT updated regularly]
+
+I know, I know, there aren't any tests. I'll add some later.
 
 NOTE:
 
