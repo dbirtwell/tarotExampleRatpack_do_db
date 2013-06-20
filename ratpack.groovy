@@ -2,9 +2,14 @@
 @Grab(value = "org.ratpack-framework:ratpack-groovy:0.9.0-SNAPSHOT")
 
 import org.ratpackframework.groovy.templating.TemplateRenderer
+import org.ratpackframework.groovy.templating.TemplatingModule
 import static org.ratpackframework.groovy.RatpackScript.ratpack
 
 ratpack {
+    modules {
+        get(TemplatingModule).setCacheSize(0)
+    }
+    
     handlers {
         // Only initialize this once
         def util = new TarotDeckUtil()
