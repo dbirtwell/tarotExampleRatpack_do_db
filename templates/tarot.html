@@ -1,12 +1,6 @@
 <html>
 	<!-- This dynamic page is using Ratpack and Groovy templates to a random Tarot Card -->
-    <head>
-    <title>Tarot for the day</title>	
-	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js">
-	  </script>
-      <link rel="stylesheet" type="text/css" href="css/reset-min.css">	  
-      <link rel="stylesheet" type="text/css" href="css/styles.css">	  	  	  
-    </head>
+    <% render "_header.html" %>
 
 	<body>
 	
@@ -77,11 +71,7 @@
 	  <!-- content -->
 	  </div>
 	  
-      <div id="footer">
-        <p>
-          No Copyright here. Use it as you like, but if it breaks, don't blame me.	
-		</p>
-      </div>				  
+    <% render "_footer.html" %>  				  
 	  
 	<!-- wrapper -->  
 	</div>  
